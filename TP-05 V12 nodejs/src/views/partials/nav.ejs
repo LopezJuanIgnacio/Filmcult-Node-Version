@@ -1,0 +1,48 @@
+<nav class="navbar navColor navbar-expand-lg navbar-dark fixed-top" id="nav">
+    <img class="logo">
+    <% if(user == null){ %>
+      <a class="btn-login ml-3" role="button" id="btn-login" href="/login">Login/Registrarse<i class="fa fa-user"></i></a>
+    <% }else{ %>
+      <img src="<%= user.foto %>" id="imgperfil" class="rounded-circle perfil ml-5" style="cursor: pointer">
+    <% } %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/" id="homeLink">Home</a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reviews" id="cosoEste">Reviews<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cartelera" id="cartelera">Cartelera</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Contactanos!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <% if(user){ %>
+    <div class="modal fade modalCuenta" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header modalColor">
+            <h4 class="modal-title">Bienvenido <%= user.username%> </h4>
+            <img src= "<%= user.foto %>" class="perfil rounded-circle">
+          </div>
+          <div class="modal-body ">
+              <p class="text-dark">Nombre: <%= user.username%> </p>
+              <p class="text-dark">Mail: <%= user.email%> </p>
+              <p class="text-dark">ID: <%= user.id%> </p>
+          </div>
+          <div class="modal-footer footerColor">
+            <button type="button" class="btn btn-cerrar text-white" data-dismiss="modal">Cerrar</button>
+            <a href="/logout" class="btn-cerrar-sesion">Cerrar sesion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <%- include ("partials/head.ejs") %>
+</head>
+<body>
+  <%- include ("partials/nav.ejs") %>
+  <div class="modal footerColor" id="login" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content ">
+        <div class="modal-header modalColor">
+          <h4 class="modal-title text-white">Bienvenido a FilmCult</h4>
+          <img class="logo2">
+        </div>
+        <form method="POST" class="" id="form">
+          <div class="modal-body">
+            <h3 class="title titulo text-center mb-4">Ingrese sus datos</h3>
+            <div>
+              <input type="email" class="formulario mb-1 ml-5" placeholder="Ingrese su email" name="mail" id="email">
+            </div>
+            <div class="errorMail error d-none ml-5">
+              <p>Ingrese un Mail valido<i class="fas fa-times-circle"></i></p>
+            </div>
+            <div>
+              <input type="password" class="formulario mb-1 ml-5" placeholder="Ingrese su Contraseña" name="password" id="password">
+            </div>
+            <div class="errorContra error d-none ml-5">
+              <p>Ingrese una contraseña valida<i class="fas fa-times-circle"></i></p>
+            </div>
+            <div class="mensaje-exito d-none ml-5">
+              <p>Logueo completado<i class="fas fa-check-circle"></i></p>
+            </div>
+            <div class="error mensaje-fallo d-none ml-5">
+              <p>error al Logearse. verifique su nombre de usuario y contraseña porfavor <i class="fas fa-times-circle"></i></p>
+            </div>
+          </div>
+          <div class="modal-footer footerColor2">
+            <a type="button" class="btn-cerrar" href="/">Volver</a>
+            <button type="button" class="btn-cerrar-sesion" id="registro">Registrarse</button>
+            <input type="submit" class="btn-enviar" id="enviar">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade footerColor" id="registracion">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content ">
+      <div class="modal-header modalColor">
+        <h4 class="modal-title text-white">Bienvenido a FilmCult</h4>
+        <img class="logo2" id="logo2">
+      </div>
+      <form method="POST" action="/login/register" id="formReg">
+        <div class="modal-body">
+          <h3 class="title titulo text-center mb-4">Cree su propia cuenta</h3>
+          <div>
+            <input type="email" class="formulario mb-1 ml-5" placeholder="Ingrese su email" name="mail2" id="email2">
+          </div>
+          <div class="errorMail2 error d-none ml-5">
+            <p>Ingrese un mail valido<i class="fas fa-times-circle"></i></p>
+          </div>
+          <div>
+            <input type="text" class="formulario mb-1 ml-5" placeholder="Ingrese su nombre de usuario" name="username" id="username">
+          </div>
+          <div class="errorUsuario error d-none ml-5">
+            <p>Ingrese un nombre valido<i class="fas fa-times-circle"></i></p>
+          </div>
+          <div>
+            <input type="password" class="formulario mb-1 ml-5" placeholder="Ingrese su Contraseña" name="password2" id="password2">
+          </div>
+          <div class="errorContra2 error d-none ml-5">
+            <p>Ingrese una contraseña valida<i class="fas fa-times-circle"></i></p>
+          </div>
+          <div class="mensaje-exito2 exito d-none ml-5">
+            <p>Registro completado<i class="fas fa-check-circle"></i></p>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input file formulario mb-1 ml-5" id="customFile" name="customFile">
+            <label class="custom-file-label" for="customFile">elija su imagen de perfil <i class="fas fa-images"></i></label>
+          </div>
+          <div class="error errorFile d-none ml-5">
+            <p>error al registrar su foto. verifique sus archivo porfavor <i class="fas fa-times-circle"></i></p>
+          </div>
+          <div class="error mensaje-fallo2 d-none ml-5">
+            <p>error al registrarse. verifique sus datos porfavor y que su email o nombre no esten ya siendo usados <i class="fas fa-times-circle"></i></p>
+          </div>
+          <div class="divImgResultado">
+            <h3 class="text-dark text-center">Previsualizacion:</h3>
+          </div>
+        </div>
+        <div class="modal-footer footerColor2">
+          <input type="submit" class="btn-enviar" id="enviarReg">
+          <button type="button" class="btn-cerrar" data-dismiss="modal">Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <%- include ("partials/footer.ejs") %>
+  <script src="/js/loginNuevo.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+hola profe esta es la version de node js del tp 5 hecha por lopez
+primero y principal para que esto funke tenes que instalar la base de datos con el archivo sql que mande y despues en src\database\connection.js tenes que 
+poner los datos de tu microsoft sql studio para que este conectada al programa y con eso estaria todo listo, le das "npm run dev" desde la terminal y deberia ir al puerto 3000
+
+aclaracion: no se porque pero los botones de los links de las reviews en la pagina index me dejaron de funcionar de la nada asique tenes que ir a las reviews escribiendo /review/num de la review
+desde la barra de busqueda, despues decime que paso y que tengo que cambiar para que vuelvan a funcionar
+
+otra cosa importante es que esto es solo para que lo revises y que me tires ideas para mejorar en nodejs. el tp 5 que hice con mis compañeros a evaluar es la segunda entrega que
+esta subida a internet
+
+como mi pagina anterior usaba firebase y en nodejs solo estan disponibles sus bases de datos y nada, tuve que adaptar todo para que se guarde local y que por ejemplo, todas las img 
+se te van a gardar en src\public\img\userimg, lo cual es muy poco conveniente ya que eso implicaria que cada vez que cargas la pagina, cargas TODAS LAS FOTOS DE PERFIL
+asique si me decis de alguna pagina de storage gratuita que funcione en nodejs me harias un favor
+
+algo que quisiera haber hecho es haber usado models, los podria haber usado para los usuarios, reviews(si se pudieran crear desde la pagina) y comentarios pero no se como hacer para 
+subir esos a sql, habia una manera para hacerlo en nosql con el npm mongoose y mongodb pero como estos dias la pagina de mongodb no funcionaba bien decidi usar sql local
+
+si tenes algun npm o alguna idea para mejorar el codigo o hacer que la pagina se vea mejor decime

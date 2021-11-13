@@ -1,0 +1,443 @@
+:root{
+    --blanco: #fff;
+    --PRINCIPAL: #531378;
+    --ACENTO: #B65FE9;
+    --tono: #643C7B;
+    --tono2: #5E2E7A;
+    --SECUNDARIO: #7A727F;
+    --INFO: #5FA3E9;
+    --AFIRMACION: #5FE964;
+    --ALERTA: #FF5E5E;
+    --AVISO: #FFEC5E;
+}
+.bodi{
+    color: var(--blanco);
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--SECUNDARIO);
+}
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+    background: var(--PRINCIPAL)
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--ACENTO);
+    border-radius: 0.25rem;
+}
+.fondo{
+    background-color: #b65fe965;
+}
+.bodi :link{
+    color: var(--blanco);
+}
+.bodi :visited{
+    color: var(--blanco);
+}
+.navColor{
+    background: var(--PRINCIPAL);
+}
+.footerColor{
+    background: var(--tono);
+}
+.footerColor2{
+    background:var(--tono2);
+}
+.iconos{
+    font-size: 3rem;
+}
+.btn-cerrar{
+    color: var(--ALERTA) ;
+    background-color: var(--PRINCIPAL);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: var(--ALERTA) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 
+    0 0 0.125em var(--blanco),
+    0 0 0.25em currentColor;
+    box-shadow:inset 0 0 1em 0 var(--ALERTA), 0 0 1em 0 var(--ALERTA);
+    position: relative;
+    transition: background-color 300ms linear;
+}
+.btn-cerrar::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--ALERTA);
+    top: 95%;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.8;
+}
+.btn-cerrar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 1em 0.5em var(--ALERTA);
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+.btn-cerrar:hover,
+.btn-cerrar:focus{
+    background: var(--ALERTA);
+    color: white;
+    text-shadow: none;
+}
+.btn-cerrar:hover,
+.btn-cerrar:focus{
+    opacity: 1;
+}
+.btn-cerrar:hover,
+.btn-cerrar:focus{
+    opacity: 1;
+}
+.btn-enviar{
+    color: var(--INFO) ;
+    background-color: var(--PRINCIPAL);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: var(--INFO) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 
+    0 0 0.125em white,
+    0 0 0.25em currentColor;
+    box-shadow:inset 0 0 1em 0 var(--INFO), 0 0 1em 0 var(--INFO);
+    position: relative;
+    transition: background-color 300ms linear;
+}
+.btn-enviar::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--INFO);
+    top: 95%;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.8;
+}
+.btn-enviar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 1em 0.5em var(--INFO);
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+.btn-enviar:hover,
+.btn-enviar:focus{
+    background: var(--INFO);
+    color: white;
+    text-shadow: none;
+}
+.btn-enviar:hover,
+.btn-enviar:focus{
+    opacity: 1;
+}
+.btn-enviar:hover,
+.btn-enviar:focus{
+    opacity: 1;
+}
+.fab:hover{
+    text-shadow: 0 0 0.125em currentColor;
+}
+.formulario{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-bottom-width: 2px;
+    width: 87%;
+}
+.modalColor{
+    background: var(--PRINCIPAL) !important;
+    border: none;
+} 
+.titulo{
+    color: var(--PRINCIPAL) !important; 
+    text-transform: uppercase;
+}
+.logo{
+    width: 5%;
+    height: 5%;
+}
+.logo2{
+    width: 10%;
+    height: 10%;
+}
+.btn-login{
+    font-size: 1.5em;
+    color: white ;
+    background-color: var(--SECUNDARIO);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: var(--SECUNDARIO) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 
+    0 0 0.125em white,
+    0 0 0.25em currentColor;
+    box-shadow:inset 0 0 1em 0 var(--SECUNDARIO), 0 0 1em 0 var(--SECUNDARIO);
+    position: relative;
+    transition: background-color 300ms linear;
+}
+.btn-login::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--SECUNDARIO);
+    top: 95%;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.8;
+}
+.btn-login::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 1em 0.5em var(--SECUNDARIO);
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+.btn-login:hover,
+.btn-login:focus{
+    background: var(--SECUNDARIO);
+    color: white;
+    text-shadow: none;
+}
+.btn-login:hover,
+.btn-login:focus{
+    opacity: 1;
+}
+.btn-login:hover,
+.btn-login:focus{
+    opacity: 1;
+}
+/* La tarjeta magica */
+.card{
+color: white;
+background-size: cover;
+padding: 10rem 0 0;
+max-width: 35ch;
+border-radius: 0.5rem;
+overflow: hidden;
+transition: transform 500ms ease
+}   
+.card:hover{
+transform:scale(1.05);
+}
+/* pasa los colores a la otra medida que usamos osea el del #*/
+.card-content {
+--padding: 1.5rem;
+padding: var(--padding);
+background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 30%,hsl(0 0% 0% / 1));
+transform: translateY(65%);
+transition: transform 500ms ease;
+}
+.card:hover .card-content {
+    transform: translateY(0%);
+    transition-delay:500ms;
+}
+.card-content > *:not(.card-title){
+opacity: 0;
+transition: opacity 500ms linear;
+}
+.card:hover .card-content > *:not(.card-title){
+opacity:1;
+transition-delay:1000ms;
+}
+.card-title {
+position:relative;
+width: max-content;
+max-width:100%; 
+}
+.card-title::after {
+content: "";
+position: absolute;
+width: calc(100% + var(--padding));
+height: 4px;
+left: calc(var(--padding)* -1);
+bottom: -2px;
+background: #7E4E9A;
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 500ms ease;
+}
+.card:hover .card-title::after{
+transform: scaleX(1);
+}
+.card-body{
+color: rgb(255 255 255/ 0.85);
+}
+.card-button{
+cursor: pointer;
+display: inline-block;
+text-decoration: none;
+color: white;
+background-color: var(--PRINCIPAL);
+padding: 0.5em 1.25em;
+border-radius: 0.25rem;
+}  
+.card-button:hover,
+card-button:focus {
+background-color:#693189;
+} 
+.card-button{
+    color: white ;
+    background-color: var(--PRINCIPAL);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: var(--PRINCIPAL) 0.125em solid;
+    padding: 0.5em 1.25em;
+    border-radius: 0.25em;
+    text-shadow: 
+    0 0 0.125em white,
+    0 0 0.25em currentColor;
+    box-shadow:inset 0 0 1em 0 var(--PRINCIPAL), 0 0 1em 0 var(--PRINCIPAL);
+    position: relative;
+    transition: background-color 300ms linear;
+}
+.card-button::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--PRINCIPAL);
+    top: 95%;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.8;
+}
+.card-button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 1em 0.5em var(--PRINCIPAL);
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+.card-button:hover,
+.card-button:focus{
+    background: var(--PRINCIPAL);
+    color: white;
+    text-shadow: none;
+}
+.card-button:hover,
+.card-button:focus{
+    opacity: 1;
+}
+.card-button:hover,
+.card-button:focus{
+    opacity: 1;
+}
+/* Fin de la tarjeta */
+.error{
+    color: var(--ALERTA);
+}
+.mensaje-exito{
+    color: var(--AFIRMACION);
+}
+.exito{
+    color: var(--AFIRMACION);
+}
+.perfil{
+    width: 5rem;
+    height: 5rem;
+    border: 4px dashed rgb(90, 90, 90);
+    cursor: pointer;
+}
+.btn-cerrar-sesion{
+    color: var(--AVISO) ;
+    background-color: var(--PRINCIPAL);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: var(--AVISO) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 
+    0 0 0.125em var(--blanco),
+    0 0 0.25em currentColor;
+    box-shadow:inset 0 0 1em 0 var(--AVISO), 0 0 1em 0 var(--AVISO);
+    position: relative;
+    transition: background-color 300ms linear;
+}
+.btn-cerrar-sesion::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--AVISO);
+    top: 95%;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.8;
+}
+.btn-cerrar-sesion::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 1em 0.5em var(--AVISO);
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+.btn-cerrar-sesion:hover,
+.btn-cerrar-sesion:focus{
+    background: var(--AVISO);
+    color: var(--blanco);
+    text-shadow: none;
+}
+.btn-cerrar-sesion:hover,
+.btn-cerrar-sesion:focus{
+    opacity: 1;
+}
+.btn-cerrar-sesion:hover,
+.btn-cerrar-sesion:focus{
+    opacity: 1;
+}
+.cargando{
+    outline: none;
+    border: none;
+}
+.cargando h3{
+    font-size: 3em;
+}
+#textArea::placeholder{
+    color: white;
+    font-size: 1rem;
+}

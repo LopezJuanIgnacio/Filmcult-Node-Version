@@ -1,0 +1,59 @@
+
+<html lang="es">
+  <head>
+    <title><%= title%></title>
+    <%- include ("partials/head.ejs") %>
+  </head>
+  <body class="bodi" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <%- include ("partials/nav.ejs") %>
+    <div class="container-fluid pt-5 mt-5">
+      <div class="mt-5 pt-5 fondo">
+        <div class="media pt-5 row" id="head">
+          <img width="200em" heigth="200em" class="align-self-start mr-3 col-md-2 col-11 ml-3" id="img" src="<%= review.url%>">
+          <div class="media-body col-md-10 col-11 ml-3">
+            <h1 class="text-center" style="margin-right:200" id="titulo"><%= title%></h1>
+            <h3 class="text-white text-center">Descripcion</h3>
+            <p class="text-white text-center" id="descripcion"><%= review.descripcion%></p>
+          </div>
+        </div>
+        <div id="body" class="mt-3">
+          <h1 class="text-center">Comentarios</h1>
+          <% if(user != null){ %>
+            <form action="/review/<%= id%>" method="POST" class="d-flex" id="form">
+            <input type="hidden" value="<%= user.id %>" name="uid">
+            <input type="textarea" rows="50" class="formulario text-white mb-1 ml-5" cols="50" placeholder="Danos tu opinion!" id="textArea" name="texto">
+            <input type="submit" placeholder="Enviar" class="btn-enviar mb-1 ml-5 justify-content-center" id="enviarComentario"> <br>
+          </form>
+          <% }else{ %>
+            <h5 class="text-center" >Loguese para comentar</h5>
+          <% } %>
+          <div class="error errorComentario d-none ml-5">
+            <p>Recuerde de que los comentarios tiene que de ser de 4 digitos a 255<i class="fas fa-times-circle"></i></p>
+          </div>
+          <div id="comentarios">
+            <% comentarios.forEach((c)=>{ %>
+              <div style="background-color:#69318986" class="media ml-5 mb-5">
+                <img src="<%= c.foto %>" class="perfil rounded-circle align-self-start mr-3" style="cursor: default">
+                <div class="media-body">
+                  <h4> <%= c.username %> </h4>
+                  <p> <%= c.texto %> </p>
+                  <% if(user != null){ %>
+                    <%if(c.uid == user.id){ %>
+                      <form action="/review/<%= id %>/delete/<%= c.id %>" method="POST">
+                        <input type="hidden" value="<%= user.id %>" name="uid">
+                        <input type="hidden" value="<%= c.uid %>" name="cuid">
+                        <button type="submit" class="btn btn-cerrar text-white">Borrar</button>
+                      </form>
+                    <%} %>
+                  <% } %>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include ("partials/footer.ejs") %>
+    <script src="/js/review.js"></script>
+  </body>
+</html>

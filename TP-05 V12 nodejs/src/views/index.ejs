@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>FilmCult</title>
+  <%- include ("partials/head.ejs") %>
+</head>
+<body class="bodi" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <%- include ("partials/nav.ejs") %>
+    <div class="container-fluid pt-5 mt-3" id="container">
+      <div class="row pt-5 justify-content-center">
+          <div class="col col-md-9 d-block mb-5">    
+              <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <% for(let i = 0; i <= carrusel.length ; i++){ %>
+                      <% if(i == 0){ %>
+                        <li data-target="#demo" data-slide-to="<%= i %>" class="active"></li>
+                      <% }else{ %>
+                        <li data-target="#demo" data-slide-to="<%= i %>" ></li>
+                      <% } %>
+                    <% } %>
+                </ul>
+                <div class="carousel-inner">
+                  <% carrusel.forEach((link)=>{ %>
+                    <% if(link.id == 1){ %>
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src=" <%= link.url %> ">
+                      </div>
+                    <% }else{ %>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src=" <%= link.url %> ">
+                      </div>
+                    <% } %>
+                  <% }) %>
+                </div>
+                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                  </a>
+              </div>
+          </div>
+      </div>
+  <div class="row ml-md-2" id="reviews">
+    <div class="card-columns ml-5">
+      <% reviews.forEach((review)=>{ %>
+        <div class="card" style="background-image: url('<%= review.url %>');">
+          <div class="card-content">
+            <h2 class="card-title"> <%= review.titulo %> </h2>
+            <p class="card-body fondo"> <%= review.descripcion %> </p>
+            <a class="card-button" src="/review/<%= review.id %>">Mas</a> 
+          </div>
+        </div>
+      <% }) %>
+  </div>
+</div>
+  <%- include ("partials/footer.ejs") %>
+  <script src="js/index.js"></script>
+</body>
+</html>
+<!--    <div class="card card1">
+      <div class="card-content">
+        <h2 class="card-title" id="card1h"></h2>
+        <p class="card-body fondo" id="card1p"></p>
+        <a class="card-button" id="card1a">Mas</a> 
+      </div>
+    </div>
+    <div class="card card2">
+      <div class="card-content">
+        <h2 class="card-title" id="card2h"></h2>
+        <p class="card-body fondo" id="card2p"></p>
+        <a class="card-button" id="card2a">Mas</a> 
+      </div>
+    </div>
+    <div class="card card3">
+      <div class="card-content">
+        <h2 class="card-title" id="card3h"></h2>
+        <p class="card-body fondo" id="card3p"></p>
+        <a class="card-button" id="card3a">Mas</a> 
+      </div>
+    </div>
+    <div class="card card4">
+      <div class="card-content">
+        <h2 class="card-title" id="card4h"></h2>
+        <p class="card-body fondo" id="card4p"></p>
+        <a class="card-button" id="card4a">Mas</a> 
+      </div>
+    </div>
+    <div class="card card5">
+      <div class="card-content">
+        <h2 class="card-title" id="card5h"></h2>
+        <p class="card-body fondo" id="card5p"></p>
+        <a class="card-button" id="card5a">Mas</a> 
+      </div>
+    </div>
+    <div class="card card6">
+      <div class="card-content">
+        <h2 class="card-title" id="card6h"></h2>
+        <p class="card-body fondo" id="card6p"></p>
+        <a  class="card-button" id="card6a">Mas</a> 
+      </div>
+    </div>-->

@@ -1,0 +1,37 @@
+
+<html lang="es">
+<head>
+  <title>La Cartelera para el cine 100% real de FilmCult</title>
+  <%- include ("partials/head.ejs") %>
+</head>
+<body class="bodi" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <%- include ("partials/nav.ejs") %>
+  <div class="container-fluid pt-5 mt-5">
+    <h1 class="titulo text-center mb-5 mt-5">BIENVENIDOS A NUESTRA CARTELERA SEMANAL</h1>
+    <table class="table table-responsive mb-5 ml-md-5 pl-md-4"">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Dia</th>
+          <% for(var i = 1; i < 6; i++){ %>
+            <th> hora <%= i %></th>
+          <% } %>
+        </tr>
+      </thead>
+      <tbody class="text-white footerColor">
+        <% datos.forEach((dia)=>{ %>
+          <tr> 
+            <th scope="row"> <%= dia.dia %> </th>
+            <th> <%= dia.hora_1 %> </th>
+            <th> <%= dia.hora_2 %> </th>
+            <th> <%= dia.hora_3 %> </th>
+            <th> <%= dia.hora_4 %> </th>
+            <th> <%= dia.hora_5 %> </th>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <%- include ("partials/footer.ejs") %>
+    <script src="/js/cartelera.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<footer class="page-footer pt-4 footerColor mt-5" id="footer">
+    <div class="container-fluid justify text-md-left">
+      <div class="row d-flex justify-content-center">
+        <h5 class="text-uppercase text-center">FilmCult</h5>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <p class="text-center">Derechos reservados para FilmCult 2021 <i class="fas fa-copyright"></i></p>
+      </div>
+      <div class="row iconos justify-content-center">
+        <a href="#!"><i class="fab fa-facebook col-3"></i></a>
+        <a href="#!"><i class="fab fa-instagram col-3"></i></a>
+        <a href="#!"><i class="fab fa-twitter col-3"></i></i></a>
+        <a href="#!"><i class="fab fa-youtube col-3"></i></a>
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-3 footerColor2">
+      <p><a href="#!">Terminos y condiciones</a> FilmCult 2021 <i class="fas fa-copyright"></i></p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/e0a50d44b2.js"></script>
+  <script>
+    firebase.storage().ref(`img/`).child(`FondoConPochoclos.png`).getDownloadURL().then(function(url) {
+      document.body.style.backgroundImage = `url("${url}")`
+    })
+    firebase.storage().ref(`img/`).child(`FilmCult Icono v2.png`).getDownloadURL().then(function(url) {
+      document.querySelector(".logo").src = url
+    })
+    firebase.storage().ref(`img/`).child(`FilmCult Icono.png`).getDownloadURL().then(function(url) {
+      document.querySelector(".logo2").src = url
+      document.querySelector("#logo2").src = url
+    })
+    document.querySelector("#imgperfil").addEventListener("click", ()=>{
+      $(".modalCuenta").modal('show');
+    })
+  </script>

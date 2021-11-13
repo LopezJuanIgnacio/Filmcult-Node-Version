@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "filereader": "^0.10.3",
+    "flash": "^1.1.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "mssql": "^7.1.0",
+    "now": "^21.0.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "rest-mssql-nodejs": "^1.0.10"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "ncp": "^2.0.0",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2"
+  },
+  "name": "tp-05-v9-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npx nodemon src/index.js"
+  },
+  "author": "Lopez y un monton de tiempo libre",
+  "license": "ISC",
+  "description": ""
+}
